@@ -1,0 +1,26 @@
+{
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": {
+    "name": "Nicholas Berlette",
+    "email": "nick@berlette.com",
+    "url": "https://github.com/nberlette"
+  },
+  "workspace": {
+    "members": [
+      "./wasm"
+    ]
+  },
+  "tasks": {
+    "test": "deno test -A --no-check=remote --coverage=.coverage --permit-no-files --clean --parallel",
+    "test:doc": "deno task test --doc",
+    "bench": "deno bench -A --no-check",
+    "lint": "deno lint . ; cargo lint",
+    "lint:fix": "deno lint --fix .",
+    "lint:license": "deno run -Aq ./scripts/check_licenses.ts",
+    "wasm:build": "deno run -Aq ./scripts/build.ts",
+    "wasm:compress": "deno run -Aq ./scripts/compress_wasm.ts",
+    "wasm:fix": "deno run -Aq ./scripts/fix_wasm_exports.ts",
+    "wasm:opt": "deno run -Aq ./scripts/wasm_opt.ts"
+  }
+}

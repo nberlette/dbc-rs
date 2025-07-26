@@ -1,0 +1,11 @@
+.old
+node_modules
+target
+.env*
+!.env.example
+!.env.vault
+!.env.public
+.DS_Store
+.Spotlight-V100
+.Trashes
+Thumbs.db
